@@ -1,0 +1,13 @@
+.sidebar {
+  height: 100vh;
+  background-color: #0e1823;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-top: 40px;
+}
