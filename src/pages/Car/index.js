@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { toast } from "react-toastify";
 import { Client } from "../../util/http";
 
@@ -11,6 +11,7 @@ import Input from "../../components/Layout/Input";
 import classes from "./index.module.css";
 export default function Car({
 	history,
+	car,
 	match: {
 		params: { id }
 	}
@@ -23,6 +24,18 @@ export default function Car({
 	const [color, setColor] = useState("");
 	const [price, setPrice] = useState("");
 	const [km, setKm] = useState("");
+
+	useEffect(() => {
+		if (car) {
+			setTitle(car.title);
+			setModel(car.model);
+			setYear(car.year);
+			setBrand(car.brand);
+			setColor(car.color);
+			setPrice(car.price);
+			setKm(car.km);
+		}
+	}, [car]);
 
 	async function saveCar() {
 		if (!title || !model || !year || !brand || !color || !price || km === undefined || km === null || km === "") {

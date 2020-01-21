@@ -7,7 +7,7 @@ import CarsList from "../../components/CarList";
 import { Client } from "../../util/http";
 
 import classes from "./index.module.css";
-export default function Home({ history }) {
+export default function Home({ history, getSelectedCar }) {
 	const [search, setSearch] = useState("");
 	const [cars, setCars] = useState([
 		{
@@ -37,7 +37,9 @@ export default function Home({ history }) {
 	return (
 		<div className={classes["home-container"]}>
 			<Search history={history} changeSearchHandler={changeSearchHandler} />
-			<div className={classes["list-container"]}>{!search ? <Presentation /> : <CarsList cars={cars} />}</div>
+			<div className={classes["list-container"]}>
+				{!search ? <Presentation /> : <CarsList getSelectedCar={getSelectedCar} cars={cars} history={history} />}
+			</div>
 		</div>
 	);
 }
