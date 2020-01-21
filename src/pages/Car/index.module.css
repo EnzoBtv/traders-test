@@ -1,0 +1,10 @@
+.form-container {
+	width: 100%;
+	padding: 273px;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

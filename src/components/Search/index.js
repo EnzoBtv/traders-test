@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../Layout/Button";
+
 import classes from "./index.module.css";
 
 export default function Search({ changeSearchHandler, history }) {
@@ -10,9 +12,9 @@ export default function Search({ changeSearchHandler, history }) {
 				placeholder='Pesquise por um veículo'
 				className={classes["search-input"]}
 			/>
-			<button onClick={() => history.push("/create")} className={classes["search-button"]}>
+			<Button onClick={() => history.push("/create")} white>
 				Cadastrar
-			</button>
+			</Button>
 		</div>
 	);
 }
