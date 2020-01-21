@@ -1,0 +1,15 @@
+.text-container {
+	display: inline-block;
+	margin-top: 11%;
+	margin-left: 28%;
+}
+
+.text {
+	font-family: cursive;
+	font-size: 87px;
+}
+
+.special-text {
+	background-color: rgba(31, 45, 64, 0.767);
+	font-family: inherit;
+}
