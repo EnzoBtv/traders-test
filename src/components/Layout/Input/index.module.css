@@ -8,6 +8,10 @@
 	padding: 7px;
 }
 
+.base-input option {
+	color: black;
+}
+
 .large-input {
 	width: 100%;
 }

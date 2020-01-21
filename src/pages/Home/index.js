@@ -24,10 +24,9 @@ export default function Home({ history }) {
 
 	async function changeSearchHandler(value) {
 		try {
-			if (value) {
-				//const result = Client.get(`/cars?search=${value}`);
-				//setCars(result.cars);
-				//console.log(result.cars);
+			if (value && process.env.REACT_APP_ENVIRONMENT === "production") {
+				const result = Client.get(`/cars?search=${value}`);
+				setCars(result.cars);
 			}
 		} catch (ex) {
 			console.log(ex.message);

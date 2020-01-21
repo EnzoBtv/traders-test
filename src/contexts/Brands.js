@@ -1,0 +1,28 @@
+import { createContext } from "react";
+
+export const Brands = createContext([
+	{
+		id: 1,
+		name: "VW"
+	},
+	{
+		id: 2,
+		name: "Chevrolet"
+	},
+	{
+		id: 3,
+		name: "FIAT"
+	},
+	{
+		id: 4,
+		name: "Ford"
+	},
+	{
+		id: 5,
+		name: "Nissan"
+	},
+	{
+		id: 6,
+		name: "Mitsubishi"
+	}
+]);
